@@ -51,11 +51,6 @@ jobs:
       matrix:
         example: ${{fromJSON(needs.get_lib_info.outputs.examples)}}
         fqbn: ["arduino:avr:uno", "arduino:avr:nano", "arduino:avr:mega"]
-        # 排除在 Nano 上无法编译的大示例
-        exclude:
-          - fqbn: "arduino:avr:nano"
-            example: "play_with_encodings"
-
     steps:
       - name: download arduino cli
         run: curl -L -o arduino-cli.tar.gz https://github.com/arduino/arduino-cli/releases/download/v1.1.1/arduino-cli_1.1.1_Linux_64bit.tar.gz
@@ -82,16 +77,7 @@ jobs:
       - name: Arduino Lib Install
         run: |
           ${ARDUINO_CLI_DIR}/arduino-cli --config-dir ${ARDUINO_CLI_CONFIG_DIR} lib install --zip-path ${{github.event.repository.name}}.zip
-      - name: Install dependencies for AVR
-        run: |
-          ${ARDUINO_CLI_DIR}/arduino-cli --config-dir ${ARDUINO_CLI_CONFIG_DIR} lib install "UTF8ToGB2312"
       - name: compile
         run: |
           echo "compile ${ARDUINO_USER_DIR}/libraries/${LIB_DIR_NAME}/examples/${{matrix.example}}/${{matrix.example}}.ino"
-          ${ARDUINO_CLI_DIR}/arduino-cli --config-dir ${ARDUINO_CLI_CONFIG_DIR} compile \
-            --fqbn ${{matrix.fqbn}} \
-            "${ARDUINO_USER_DIR}/libraries/${LIB_DIR_NAME}/examples/${{matrix.example}}/${{matrix.example}}.ino" \
-            --build-property "compiler.c.elf.extra_flags=-Os" \
-            --build-property "compiler.cpp.elf.extra_flags=-Os" \
-            --build-property "build.extra_flags=-DNDEBUG" \
-            --log --clean -v
+          ${ARDUINO_CLI_DIR}/arduino-cli --config-dir ${ARDUINO_CLI_CONFIG_DIR} compile --fqbn ${{matrix.fqbn}} "${ARDUINO_USER_DIR}/libraries/${LIB_DIR_NAME}/examples/${{matrix.example}}/${{matrix.example}}.ino" --log --clean -v

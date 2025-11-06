@@ -40,7 +40,7 @@ void setup() {
 }
 
 void loop() {
-  if (g_tts20.Play(F("[v1]音量一"), em::Tts20::TextEncodingType::kUtf8)) {
+  if (g_tts20.Play(F("[v1]音量一"))) {
     Serial.println(F("Play: \"[v1]音量一\", successful"));
   } else {
     Serial.println(F("Play: \"[v1]音量一\", failed"));
@@ -50,7 +50,7 @@ void loop() {
 
   delay(2000);
 
-  if (g_tts20.Play(F("[v9]音量九"), em::Tts20::TextEncodingType::kUtf8)) {
+  if (g_tts20.Play(F("[v9]音量九"))) {
     Serial.println(F("Play: \"[v9]音量九\", successful"));
   } else {
     Serial.println(F("Play: \"[v9]音量九\", failed"));

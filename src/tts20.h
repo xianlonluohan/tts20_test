@@ -42,37 +42,6 @@ class Tts20 {
 
   /**
    * @~Chinese
-   * @enum TextEncodingType
-   * @brief 文本编码类型。
-   */
-  /**
-   * @~English
-   * @enum TextEncodingType
-   * @brief Text encoding type.
-   */
-  enum class TextEncodingType : uint8_t {
-    /**
-     * @~Chinese
-     * @brief 表示文本编码类型为GB2312。
-     */
-    /**
-     * @~English
-     * @brief The text encoding type is GB2312.
-     */
-    kGb2312 = 0x01,
-    /**
-     * @~Chinese
-     * @brief 表示文本编码类型为UTF-8。
-     */
-    /**
-     * @~English
-     * @brief The text encoding type is UTF-8.
-     */
-    kUtf8 = 0x04,
-  };
-
-  /**
-   * @~Chinese
    * @brief 构造函数。
    * @param[in] i2c_address I2C地址。
    * @param[in] wire TwoWire 对象引用。
@@ -135,23 +104,19 @@ class Tts20 {
    * @~Chinese
    * @brief 文本转语音并播放。
    * @param[in] text 要播放的文本数据，数据长度不大于4K个字节。
-   * @param[in] text_encoding_type 文本编码类型，参考 @ref TextEncodingType。
    * @return 是否成功合成并开始播放。
    * @details 文本长度限制：单次合成文本量最多4K字节。如果文本超过此限制，播放将失败。
-   *          - 文本编码会影响实际字节数，GB2312编码会对中文字符进行转换。
    *          - 建议在发送前检查文本长度，避免因文本过长导致的播放失败。
    */
   /**
    * @~English
    * @brief Convert text to speech and play.
    * @param[in] text The text data to be played should not exceed a length of 4K bytes.
-   * @param[in] text_encoding_type Text encoding type, refer to @ref TextEncodingType.
    * @return Has it been successfully synthesized and started playing.
    * @details Text length limit: Maximum 4K bytes per synthesis. Playback will fail if text exceeds this limit.
-   *          - Text encoding affects the actual byte count, GB2312 encoding will convert Chinese characters.
    *          - It is recommended to check text length before sending to avoid playback failure due to excessive text length.
    */
-  bool Play(const String &text, const TextEncodingType text_encoding_type);
+  bool Play(const String &text);
 
   /**
    * @~Chinese

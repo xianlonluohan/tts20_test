@@ -36,7 +36,7 @@ void setup() {
 }
 
 void loop() {
-  if (g_tts20.Play(F("一二三四五"), em::Tts20::TextEncodingType::kUtf8)) {
+  if (g_tts20.Play(F("一二三四五"))) {
     Serial.println(F("Play: \"一二三四五\", successful"));
   } else {
     Serial.println(F("Play: \"一二三四五\", failed"));

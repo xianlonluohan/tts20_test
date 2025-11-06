@@ -5,9 +5,7 @@ var indexSectionsWithContent =
   2: "ept",
   3: "dfinprstv",
   4: "k",
-  5: "t",
-  6: "k",
-  7: "e"
+  5: "e"
 };
 
 var indexSectionNames =
@@ -17,9 +15,7 @@ var indexSectionNames =
   2: "files",
   3: "functions",
   4: "variables",
-  5: "enums",
-  6: "enumvalues",
-  7: "defines"
+  5: "defines"
 };
 
 var indexSectionLabels =
@@ -29,8 +25,6 @@ var indexSectionLabels =
   2: "文件",
   3: "函数",
   4: "变量",
-  5: "枚举",
-  6: "枚举值",
-  7: "宏定义"
+  5: "宏定义"
 };
 

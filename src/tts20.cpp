@@ -108,26 +108,15 @@ String Tts20::name() {
   return result;
 }
 
-bool Tts20::Play(const String &text, const TextEncodingType text_encoding_type) {
-  EM_CHECK(text.length() > 0);
+bool Tts20::Play(const String &text) {
+  EM_CHECK(text.length() > 0 && text.length() <= kMaxTextBytes);
 
-  String encoded_text;
-
-  if (text_encoding_type == TextEncodingType::kGb2312) {
-    encoded_text = GB.get(text);
-  } else {
-    encoded_text = text;
-  }
-
-  EM_CHECK(encoded_text.length() <= kMaxTextBytes);
-
-  const uint8_t header[] = {
-      0xFD, ((encoded_text.length() + 2) >> 8) & 0xFF, ((encoded_text.length() + 2) & 0xFF), 0x01, static_cast<uint8_t>(text_encoding_type)};
+  const uint8_t header[] = {0xFD, ((text.length() + 2) >> 8) & 0xFF, ((text.length() + 2) & 0xFF), 0x01, 0x04};
 
   ClearRxBuffer();
 
   I2cWrite(header, sizeof(header));
-  I2cWrite(reinterpret_cast<const uint8_t *>(encoded_text.c_str()), encoded_text.length());
+  I2cWrite(reinterpret_cast<const uint8_t *>(text.c_str()), text.length());
 
   return ReadUntil(kResponseSuccess, kDefaultTimeoutMs);
 }

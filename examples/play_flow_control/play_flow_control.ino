@@ -38,7 +38,7 @@ void setup() {
 void loop() {
   String play_text = F("一二三四五六七八九十");
 
-  if (g_tts20.Play(play_text, em::Tts20::TextEncodingType::kUtf8)) {
+  if (g_tts20.Play(play_text)) {
     Serial.print(F("Playing: "));
     Serial.println(play_text);
 

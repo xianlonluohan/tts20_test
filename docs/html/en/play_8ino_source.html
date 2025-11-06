@@ -137,7 +137,7 @@ $(function(){initNavTree('play_8ino_source.html',''); initResizable(true); });
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span> loop() {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keywordflow">if</span> (g_tts20.Play(F(<span class="stringliteral">&quot;一二三四五&quot;</span>), <a class="code hl_enumvalue" href="classem_1_1_tts20.html#ab63ba9c1b3a9e8d1960f4a30671471cca13ab0711d8794e973c9378b7675ab786">em::Tts20::TextEncodingType::kUtf8</a>)) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keywordflow">if</span> (g_tts20.Play(F(<span class="stringliteral">&quot;一二三四五&quot;</span>))) {</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    Serial.println(F(<span class="stringliteral">&quot;Play: \&quot;一二三四五\&quot;, successful&quot;</span>));</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    Serial.println(F(<span class="stringliteral">&quot;Play: \&quot;一二三四五\&quot;, failed&quot;</span>));</div>
@@ -148,7 +148,6 @@ $(function(){initNavTree('play_8ino_source.html',''); initResizable(true); });
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  delay(2000);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
 <div class="ttc" id="aclassem_1_1_tts20_html"><div class="ttname"><a href="classem_1_1_tts20.html">em::Tts20</a></div><div class="ttdoc">TTS20 Text-to-Speech Module Driver Class.</div><div class="ttdef"><b>Definition</b> <a href="tts20_8h_source.html#l00031">tts20.h:31</a></div></div>
-<div class="ttc" id="aclassem_1_1_tts20_html_ab63ba9c1b3a9e8d1960f4a30671471cca13ab0711d8794e973c9378b7675ab786"><div class="ttname"><a href="classem_1_1_tts20.html#ab63ba9c1b3a9e8d1960f4a30671471cca13ab0711d8794e973c9378b7675ab786">em::Tts20::TextEncodingType::kUtf8</a></div><div class="ttdeci">@ kUtf8</div><div class="ttdoc">The text encoding type is UTF-8.</div><div class="ttdef"><b>Definition</b> <a href="tts20_8h_source.html#l00071">tts20.h:71</a></div></div>
 <div class="ttc" id="aclassem_1_1_tts20_html_ae0e04e829089c08070cb170a67215052"><div class="ttname"><a href="classem_1_1_tts20.html#ae0e04e829089c08070cb170a67215052">em::Tts20::kDefaultI2cAddress</a></div><div class="ttdeci">static constexpr uint8_t kDefaultI2cAddress</div><div class="ttdoc">Default I2C address.</div><div class="ttdef"><b>Definition</b> <a href="tts20_8h_source.html#l00041">tts20.h:41</a></div></div>
 <div class="ttc" id="atts20_8h_html"><div class="ttname"><a href="tts20_8h.html">tts20.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

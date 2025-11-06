@@ -1,9 +1,5 @@
 var classem_1_1_tts20 =
 [
-    [ "TextEncodingType", "classem_1_1_tts20.html#ab63ba9c1b3a9e8d1960f4a30671471cc", [
-      [ "kGb2312", "classem_1_1_tts20.html#ab63ba9c1b3a9e8d1960f4a30671471cca6458f60c397a753a4d9701095a07d428", null ],
-      [ "kUtf8", "classem_1_1_tts20.html#ab63ba9c1b3a9e8d1960f4a30671471cca13ab0711d8794e973c9378b7675ab786", null ]
-    ] ],
     [ "Tts20", "classem_1_1_tts20.html#aea3ee289727d68dc8998b206f07b361d", null ],
     [ "device_id", "classem_1_1_tts20.html#a8a4d90cbfa1e883e9325de0577bd73b8", null ],
     [ "firmware_version", "classem_1_1_tts20.html#a9b8cd98741afb198a602cf7b50915b30", null ],
@@ -11,7 +7,7 @@ var classem_1_1_tts20 =
     [ "IsBusy", "classem_1_1_tts20.html#a1fd60bb77007284d8b666c3f25ade2f2", null ],
     [ "name", "classem_1_1_tts20.html#aded8060e44e8128f73466bc8479300a7", null ],
     [ "Pause", "classem_1_1_tts20.html#a0caa9585487c9df905063b4dfd648b7b", null ],
-    [ "Play", "classem_1_1_tts20.html#a7096c969e361663b4ffe86fbc9c40795", null ],
+    [ "Play", "classem_1_1_tts20.html#a67060bb832abb5b04e51832ed26ebab8", null ],
     [ "Resume", "classem_1_1_tts20.html#a845db5bebcdc8a30b6a789bec9478dca", null ],
     [ "Stop", "classem_1_1_tts20.html#ac3abda06650ea9373bfbb79afd163b33", null ]
 ];

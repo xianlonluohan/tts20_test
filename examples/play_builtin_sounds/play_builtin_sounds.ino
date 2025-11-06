@@ -46,7 +46,7 @@ void setup() {
 }
 
 void loop() {
-  if (g_tts20.Play(F("ring_1"), em::Tts20::TextEncodingType::kUtf8)) {
+  if (g_tts20.Play(F("ring_1"))) {
     Serial.println(F("Play: \"ring_1\", successful"));
   } else {
     Serial.println(F("Play: \"ring_1\", failed"));
