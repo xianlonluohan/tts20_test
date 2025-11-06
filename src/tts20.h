@@ -4,7 +4,6 @@
 #define _EM_TTS20_H_
 
 #include <Arduino.h>
-#include <UTF8ToGB2312.h>
 #include <Wire.h>
 
 #include "em_check.h"
