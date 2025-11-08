@@ -38,4 +38,4 @@ var menudata={children:[
 {text:"宏定义",url:"globals_defs.html"}]}]},
 {text:"示例",url:"examples.html"},
 {text:"下载",url:"usergroup0.html",children:[
-{text:"TTS20_v1.0.0.zip: https://gh-proxy.com//archive/refs/tags/v1.0.0.zip",url:"^https://gh-proxy.com//archive/refs/tags/v1.0.0.zip"}]}]}
+{text:"EM_TTS20_v1.0.0.zip: https://gh-proxy.com//archive/refs/tags/v1.0.0.zip",url:"^https://gh-proxy.com//archive/refs/tags/v1.0.0.zip"}]}]}

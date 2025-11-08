@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "TTS20 Arduino Lib", "index.html", [
+  [ "EM TTS20 Arduino Lib", "index.html", [
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -43,7 +43,7 @@ var NAVTREE =
     ] ],
     [ "Examples", "examples.html", "examples" ],
     [ "Downloads", "usergroup0.html", [
-      [ "TTS20_v1.0.0.zip: /archive/refs/tags/v1.0.0.zip", "/archive/refs/tags/v1.0.0.zip", null ]
+      [ "EM_TTS20_v1.0.0.zip: /archive/refs/tags/v1.0.0.zip", "/archive/refs/tags/v1.0.0.zip", null ]
     ] ]
   ] ]
 ];

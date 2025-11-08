@@ -2,4 +2,4 @@
 
 ## Introduction
 
-TTS20 module library.
+EMakefun TTS20 library.
