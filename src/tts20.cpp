@@ -283,6 +283,7 @@ uint8_t Tts20::I2cRead(uint8_t *buffer, const uint8_t expected_length, const uin
   }
   return actual_length;
 }
+
 bool Tts20::ReadUntil(const uint8_t target_byte, const uint32_t timeout_ms) {
   uint8_t data = 0;
   if (I2cRead(&data, sizeof(data), timeout_ms) == sizeof(data) && data == target_byte) {

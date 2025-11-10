@@ -1,6 +1,5 @@
 var NAVTREEINDEX0 =
 {
-"/archive/refs/tags/v1.0.0.zip":[3,0],
 "annotated.html":[0,0],
 "classem_1_1_tts20.html":[0,0,0,0],
 "classem_1_1_tts20.html#a0caa9585487c9df905063b4dfd648b7b":[0,0,0,0,6],
